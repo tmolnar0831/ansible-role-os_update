@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: molecule
+  gather_facts: false
+  tasks:
+    - name: Check the role
+      ansible.builtin.include_role:
+        name: os_update
+        tasks_from: main.yml

@@ -1,0 +1,10 @@
+---
+# tasks file for os_update
+
+- name: Upgrade the OS packages
+  ansible.builtin.apt:
+    upgrade: dist
+    autoremove: true
+    autoclean: true
+    force_apt_get: true
+    cache_valid_time: 3600
